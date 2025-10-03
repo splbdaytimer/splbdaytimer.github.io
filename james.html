@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>james timer</title>
+  <style>
+  p {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 0px;
+    font-family: arial, sans-serif;
+  }
+  h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 0px;
+    font-family: arial, sans-serif;
+  }
+  body {
+    background-image: url('james.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
+  img {
+    opacity: 0.3;
+  }
+  </style>
+</head>
+<body>
+  <h1 style="color:pink;">time until i can legally peg james (my crush:3):</h1>
+  <br>
+  <p id="demo" style="color:pink;"></p>
+  <img src="IMG_5548.gif" alt="kevin:3" style="width:100%;height:auto;">
+  <script>
+    // set date
+    var countDownDate = new Date("Jan 12, 2026 00:00:00").getTime();
+    
+    // update every second
+    var x = setInterval(function() {
+      // Get date and time
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+  
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+      document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+  
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "hes legally peggable now yayy uwu <3";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
